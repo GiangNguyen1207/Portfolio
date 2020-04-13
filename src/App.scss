@@ -1,0 +1,30 @@
+body, html, #root {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333644;
+  width: 100%;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff7272;
+  text-align: center;
+} 
+
+$tablet-breakpoint: 767px;
+$phone-breakpoint: 414px; 
+
+@media (max-width: $tablet-breakpoint) {
+  .title {
+    font-size: 26px;
+  }
+}

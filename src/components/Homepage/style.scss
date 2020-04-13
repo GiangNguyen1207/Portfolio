@@ -1,0 +1,135 @@
+.homepage-container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction-container {
+  width: 35%;
+  font-size: 120px;
+  color: #333644;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  line-height: 100px;
+  animation: hello 1s;
+
+  p {
+    margin: 0;
+    padding-bottom: 5%;
+  }
+}
+
+.animation {
+  width: 55%;
+}
+
+#head {
+  animation: head 1s infinite alternate;
+  transform-origin: bottom;
+}
+
+#hand {
+  animation: hand 1s infinite alternate;
+}
+
+#leaves {
+  animation: leaves 5s ease-in-out infinite alternate;
+  transform-origin: left;
+}
+
+@keyframes head {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(10deg);
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes leaves {
+  0% {
+    transform: skewX(0);
+  }
+  50% {
+    transform: skewX(5deg);
+  }
+  100% {
+    transform: skewX(-5deg);
+  }
+}
+
+@keyframes hello {
+  from {
+    opacity: 0;
+    color: white;
+    letter-spacing: 50px;
+  }
+  to {
+    opacity: 1;
+    color: #333644;
+    letter-spacing: 0;
+  }
+}
+
+
+$tablet-breakpoint: 1024px;
+$ipad-breakpoint: 768px;
+$phone-breakpoint: 414px;
+
+@media (max-width: $tablet-breakpoint) {
+  .introduction-container {
+    font-size: 80px ;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $ipad-breakpoint) {
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .introduction-container {
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    line-height: 80px;
+    padding-bottom: 10%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .animation {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: $phone-breakpoint) {
+  .introduction-container {
+    font-size: 50px ;
+
+    p {
+      margin: 0;
+      padding: 0
+    }
+  }
+}

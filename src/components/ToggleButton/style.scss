@@ -1,0 +1,52 @@
+.burger {
+  display: none;
+
+  .line1 {
+    width: 30px;
+    height: 3px;
+    background-color: #333644;
+    margin: 6px 0;
+    border-radius: 10px;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #333644;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-10px);;
+    }
+
+    &::after {
+      transform: translateY(10px);;
+    }
+  }
+}
+
+.close {
+  .line1 {
+    background: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+$phone-breakpoint: 767px;
+
+@media (max-width: $phone-breakpoint) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
