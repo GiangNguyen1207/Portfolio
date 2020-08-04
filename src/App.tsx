@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import AppBar from './components/AppBar';
-import Footer from './components/Footer';
+import AppBar from './components/AppBar'
+import Footer from './components/Footer'
 import Routes from './Routes'
 import './App.scss'
 
@@ -12,7 +12,7 @@ function App() {
       <Routes />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

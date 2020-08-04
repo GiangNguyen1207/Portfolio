@@ -26,18 +26,18 @@
       transform: translateY(10px);;
     }
   }
-}
 
-.close {
-  .line1 {
-    background: transparent;
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
+  &--close {
+    .line1 {
+      background: transparent;
+  
+      &::before {
+        transform: rotate(45deg);
+      }
+  
+      &::after {
+        transform: rotate(-45deg);
+      }
     }
   }
 }

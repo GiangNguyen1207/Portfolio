@@ -22,13 +22,12 @@
     background-color: #333644;
     color: #fae7cb;
   }
-}
 
-.active {
-  background-color: #333644;
-  color: #fae7cb;
+  &--active {
+    background-color: #333644;
+    color: #fae7cb;
+  }
 }
-
 
 $tablet-breakpoint: 768px;
 $phone-breakpoint: 767px;
@@ -41,7 +40,7 @@ $phone-breakpoint: 767px;
 
 @media (max-width: $phone-breakpoint) {
   body {
-    overflow-x: visible;
+    overflow-x: hidden;
   }
 
   .nav-links {
@@ -57,15 +56,15 @@ $phone-breakpoint: 767px;
     width: 40%;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+
+    &--open {
+      transform: translateX(0);
+    }
   }
 
   .link {
     text-align: center;
     width: 100%;
     padding: 23px 0;
-  }
-
-  .mobile-nav-links-open {
-    transform: translateX(0);
   }
 }

@@ -5,7 +5,6 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import './style.scss'
 
 const Footer = () => {
-
   const handleLinkedIn = () => {
     window.open('https://www.linkedin.com/in/giang-nguyen-aa8161106')
   }
@@ -15,15 +14,18 @@ const Footer = () => {
   }
 
   return (
-    <div className='footer-container'>
-      <div className='footer-grid'> 
-        <p className='footer-name'>Giang Nguyen</p>
-        <div className='footer-icon'>
+    <div className="footer-container">
+      <div className="footer-grid">
+        <div>
           <button onClick={handleLinkedIn}>
-            <FontAwesomeIcon icon={faLinkedin} size='lg' style={{marginRight:'1%'}}/>
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              size="lg"
+              style={{ marginRight: '1%' }}
+            />
           </button>
           <button onClick={handleGitHub}>
-            <FontAwesomeIcon icon={faGithub} size='lg'/>
+            <FontAwesomeIcon icon={faGithub} size="lg" />
           </button>
         </div>
       </div>
