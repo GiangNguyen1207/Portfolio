@@ -1,7 +1,7 @@
 .project-container {
   width: 90%;
   min-height: 100%;
-  margin: 5% auto;
+  margin: 2% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,6 +9,8 @@
 
 .project-card {
   margin: 1% 0;
+  border: 1px solid #333644;
+  border-radius: 12px;
 }
 
 .project-card-grid {

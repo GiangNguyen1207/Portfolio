@@ -7,7 +7,7 @@ import './style.scss'
 const Projects = () => {
   return (
     <div className="project-container">
-      <p className="title">My projects</p>
+      <p className="title">Below are my projects that I have joined:</p>
       <Eventhacker />
       <CountryApp />
     </div>

@@ -5,7 +5,9 @@ import './style.scss'
 const Skills = () => {
   return (
     <div className="skill-container">
-      <p className="title">My skills</p>
+      <p className="title">
+        Find more about the stacks I have prepared on the fullstack path:
+      </p>
       <div className="skill-grid">
         <div className="skill-grid-box">
           <h4>Front-end development</h4>

@@ -9,7 +9,7 @@
 
 .introduction-container {
   width: 35%;
-  font-size: 120px;
+  font-size: 90px;
   color: #333644;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -77,12 +77,12 @@
   from {
     opacity: 0;
     color: white;
-    letter-spacing: 50px;
+    font-size: 70px
   }
   to {
     opacity: 1;
     color: #333644;
-    letter-spacing: 0;
+    font-size: 90px
   }
 }
 

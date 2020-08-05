@@ -1,5 +1,6 @@
 import React from 'react'
 
+import eventpic from '../../../../images/event_hacker.png'
 import Button from '../../../Button'
 
 const SecondCard = () => {
@@ -14,7 +15,14 @@ const SecondCard = () => {
   return (
     <div className="project-card">
       <div className="project-card-grid">
-        <div className="project-image"></div>
+        <div className="project-image">
+          <img
+            src={eventpic}
+            width="100%"
+            height="100%"
+            alt="Event hacker app"
+          />
+        </div>
         <div className="project-content">
           <h3>Country App</h3>
           <p>
