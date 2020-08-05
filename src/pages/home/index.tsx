@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ReactComponent as AnimationPic } from '../../images/animation.svg'
+import { ReactComponent as AnimationPic } from 'images/animation.svg'
 import './style.scss'
 
 const Homepage = () => {

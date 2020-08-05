@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import Navbar from '../Navbar'
-import ToggleButton from '../ToggleButton'
+import Navbar from 'components/Navbar'
+import ToggleButton from 'components/ToggleButton'
 import './style.scss'
 
 const AppBar = () => {
