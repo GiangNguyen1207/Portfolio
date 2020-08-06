@@ -1,7 +1,7 @@
 import React from 'react'
 
-import EventHackerApp from 'pages/projects/components/EventHacker'
-import CountryApp from 'pages/projects/components/CountryApp'
+import ProjectCard from 'components/ProjectCard'
+import { projects } from 'pages/projects/components/projects'
 import './style.scss'
 
 const Projects = () => {
@@ -9,8 +9,19 @@ const Projects = () => {
     <div className="project-container">
       <p className="title">Below are my projects that I have joined:</p>
       <div className="project-container__card">
-        <EventHackerApp />
-        <CountryApp />
+        {projects.map((p, index) => {
+          return (
+            <ProjectCard
+              projectId={index}
+              title={p.title}
+              pic={p.pic}
+              description={p.description}
+              stacks={p.stacks}
+              onClickDemo={() => window.open(p.demoLink)}
+              onClickRepo={() => window.open(p.repoLink)}
+            />
+          )
+        })}
       </div>
     </div>
   )

@@ -1,22 +1,24 @@
 import React, { useState } from 'react'
-import Collapse from 'react-bootstrap/Collapse'
+import Accordion from 'react-bootstrap/Accordion'
 
 import Button from 'components/Button'
 import './styles.scss'
 
 type Props = {
+  projectId: number;
   title: string;
   pic: string;
-  text: string;
+  description: string;
   stacks: string;
   onClickDemo: () => void;
   onClickRepo: () => void;
 };
 
 const ProjectCard = ({
+  projectId,
   title,
   pic,
-  text,
+  description,
   stacks,
   onClickDemo,
   onClickRepo,
@@ -24,28 +26,28 @@ const ProjectCard = ({
   const [isOpen, setOpen] = useState<boolean>(false)
 
   return (
-    <div
-      className="project-card"
-      onClick={() => setOpen(!isOpen)}
-      aria-controls="collapse-text"
-      aria-expanded={isOpen}
-      onKeyPress={() => setOpen(!isOpen)}
-      role="button"
-      tabIndex={0}
-    >
-      <div className="project-card__content">
+    <Accordion>
+      <Accordion.Toggle
+        className={`accordion__content accordion__content--${
+          isOpen ? 'hideOverlay' : ''
+        }`}
+        eventKey={`${projectId}`}
+        onClick={() => setOpen(!isOpen)}
+      >
         <img src={pic} width="100%" alt={title} />
-        <p>{title}</p>
-        <Collapse in={isOpen}>
-          <div id="collapse-text">
-            <p>{text}</p>
-            <p>Tech stacks: {stacks}</p>
-            <Button label="Live demo" handleButton={onClickDemo} />
-            <Button label="Github Repository" handleButton={onClickRepo} />
-          </div>
-        </Collapse>
-      </div>
-    </div>
+        <div className="overlay">
+          <p className="project-text">{title}</p>
+        </div>
+      </Accordion.Toggle>
+      <Accordion.Collapse eventKey={`${projectId}`}>
+        <div className="accordion__collapse">
+          <p>{description}</p>
+          <p>Tech stacks: {stacks}</p>
+          <Button label="Live demo" handleButton={onClickDemo} />
+          <Button label="Github Repository" handleButton={onClickRepo} />
+        </div>
+      </Accordion.Collapse>
+    </Accordion>
   )
 }
 
