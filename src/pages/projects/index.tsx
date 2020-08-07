@@ -2,12 +2,16 @@ import React from 'react'
 
 import ProjectCard from 'components/ProjectCard'
 import { projects } from 'pages/projects/components/projects'
+import Heading from 'components/Heading'
 import './style.scss'
 
 const Projects = () => {
   return (
     <div className="project-container">
-      <p className="title">Below are my projects that I have joined:</p>
+      <Heading
+        title="Below are my projects that I have joined:"
+        type="colorful"
+      />
       <div className="project-container__card">
         {projects.map((p, index) => {
           return (

@@ -14,14 +14,6 @@
   }
 }
 
-.about-text1 {
-  margin-top: 2%;
-  font-size: 22px;
-  line-height: 50px;
-  text-align: center;
-  font-style: bold;
-}
-
 .about-text2 {
   width: 50%;
   font-size: 18px;
@@ -30,8 +22,9 @@
 }
 
 .avatar {
-  width: 30%;
+  width: 22%;
   border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 $phone-breakpoint: 414px;

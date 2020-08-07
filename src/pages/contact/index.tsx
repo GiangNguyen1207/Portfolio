@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Heading from 'components/Heading'
 import './style.scss'
 
 const Contact = () => {
   return (
     <div className="contact-container">
-      <p className="title">Contact me</p>
+      <Heading title="Contact me" type="colorful" />
       <div className="form">
         <form>
           <label htmlFor="name">Name:</label>

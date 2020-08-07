@@ -7,43 +7,9 @@
   justify-content: center;
 
   &__card {
+    margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
-  }
-}
-
-.project-card-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  border-radius: 10px;
-  background: #333644;
-}
-
-.project-image {
-  flex: 1;
-  img {
-    border-radius: 10px;
-  }
-}
-
-.project-content {
-  margin: 2%;
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  h3 {
-    margin: 0;
-    padding: 0;
-    color: #fffafa;
-  }
-
-  p {
-    color: #ccc;
-    margin: 0;
-    padding: 2% 2% 2% 0;
   }
 }
 

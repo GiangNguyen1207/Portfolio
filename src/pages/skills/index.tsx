@@ -1,16 +1,20 @@
 import React from 'react'
 
+import Heading from 'components/Heading'
 import './style.scss'
 
 const Skills = () => {
   return (
     <div className="skill-container">
-      <p className="title">
-        Find more about the stacks I have prepared on the fullstack path:
-      </p>
-      <div className="skill-grid">
-        <div className="skill-grid-box">
-          <h4>Front-end development</h4>
+      <Heading
+        title="Find more about the stacks I have prepared on the fullstack path:"
+        type="colorful"
+      />
+      <div className="skill-container__grid">
+        <div className="skill-box">
+          <div className="skill-box__heading">
+            <Heading title="Front-end development" type="secondary" />
+          </div>
           <ul>
             <li>TypeScript</li>
             <li>JavaScript</li>
@@ -18,8 +22,10 @@ const Skills = () => {
             <li>Respnsive design: Bootstrap, Material UI</li>
           </ul>
         </div>
-        <div className="skill-grid-box">
-          <h4>Back-end development</h4>
+        <div className="skill-box">
+          <div className="skill-box__heading">
+            <Heading title="Back-end development" type="secondary" />
+          </div>
           <ul>
             <li>NodeJS</li>
             <li>ExpressJS</li>
@@ -28,8 +34,10 @@ const Skills = () => {
             <li>Database: MongoDB, PostgreSQL</li>
           </ul>
         </div>
-        <div className="skill-grid-box">
-          <h4>Devops</h4>
+        <div className="skill-box">
+          <div className="skill-box__heading">
+            <Heading title="Devops" type="secondary" />
+          </div>
           <ul>
             <li>Github</li>
             <li>Bash scripting</li>
