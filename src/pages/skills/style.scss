@@ -15,28 +15,6 @@
   }
 }
 
-.skill-box {
-  width: 25%;
-  margin-right: 2%;
-  padding: 2%;
-  border-radius: 15px;
-  background-color: #333644;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
-
-  &__heading {
-    width: 90%;
-    margin: 5% auto;
-    padding: 5px;
-    text-align: center;
-    background: #ffd52a;
-  }
-
-  li {
-    padding: 3%;
-    color: #fffafa;
-  }
-}
-
 $tablet-breakpoint: 768px;
 $phone-breakpoint: 414px;
 

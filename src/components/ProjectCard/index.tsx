@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion'
 
-import Button from 'components/Button'
+import ButtonComponent from 'components/Button'
 import './styles.scss'
 
 type Props = {
+  key: string;
   projectId: number;
   title: string;
   pic: string;
@@ -34,7 +35,7 @@ const ProjectCard = ({
         eventKey={`${projectId}`}
         onClick={() => setOpen(!isOpen)}
       >
-        <img src={pic} width="100%" alt={title} />
+        <img src={pic} width="100%" alt={title} className="project-image" />
         <div className="overlay">
           <p className="project-text">{title}</p>
         </div>
@@ -43,8 +44,18 @@ const ProjectCard = ({
         <div className="accordion__collapse">
           <p>{description}</p>
           <p>Tech stacks: {stacks}</p>
-          <Button label="Live demo" handleButton={onClickDemo} />
-          <Button label="Github Repository" handleButton={onClickRepo} />
+          <div className="project-card-button">
+            <ButtonComponent
+              label="Live demo"
+              handleButton={onClickDemo}
+              type="big"
+            />
+            <ButtonComponent
+              label="Github Repository"
+              handleButton={onClickRepo}
+              type="big"
+            />
+          </div>
         </div>
       </Accordion.Collapse>
     </Accordion>

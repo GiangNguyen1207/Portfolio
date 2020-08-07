@@ -26,11 +26,11 @@ const DesktopAppBar = ({ isNavbarOpen }: Props) => {
         </NavLink>
         <NavLink
           exact
-          to="/skills"
+          to="/stacks"
           className="link"
           activeClassName="link--active"
         >
-          Skills
+          Stacks
         </NavLink>
         <NavLink
           exact

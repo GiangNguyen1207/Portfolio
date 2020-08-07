@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Heading from 'components/Heading'
+import SkillBox from 'components/SkillBox'
+import { frontend, backend, devOps } from 'pages/skills/components/skills'
 import './style.scss'
 
 const Skills = () => {
@@ -11,39 +13,9 @@ const Skills = () => {
         type="colorful"
       />
       <div className="skill-container__grid">
-        <div className="skill-box">
-          <div className="skill-box__heading">
-            <Heading title="Front-end development" type="secondary" />
-          </div>
-          <ul>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
-            <li>ReactJS</li>
-            <li>Respnsive design: Bootstrap, Material UI</li>
-          </ul>
-        </div>
-        <div className="skill-box">
-          <div className="skill-box__heading">
-            <Heading title="Back-end development" type="secondary" />
-          </div>
-          <ul>
-            <li>NodeJS</li>
-            <li>ExpressJS</li>
-            <li>REST API</li>
-            <li>Testing framework: Jest</li>
-            <li>Database: MongoDB, PostgreSQL</li>
-          </ul>
-        </div>
-        <div className="skill-box">
-          <div className="skill-box__heading">
-            <Heading title="Devops" type="secondary" />
-          </div>
-          <ul>
-            <li>Github</li>
-            <li>Bash scripting</li>
-            <li>Cloud: AWS</li>
-          </ul>
-        </div>
+        <SkillBox name="Front-end" stacks={frontend} />
+        <SkillBox name="Back-end" stacks={backend} />
+        <SkillBox name="DevOps" stacks={devOps} />
       </div>
     </div>
   )

@@ -10,17 +10,17 @@
   color: #333644;
   list-style-type: none;
   display: inline-block;
-  font-family: 'Flamenco', cursive;
+  font-family: 'Lobster Two', cursive;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 2px;
   cursor: pointer;
   display: block;
   padding: 12px;
   text-decoration: none;
-  text-transform: uppercase;
 
   &:hover {
+    text-decoration: none;
     background-color: #333644;
     color: #fae7cb;
   }
