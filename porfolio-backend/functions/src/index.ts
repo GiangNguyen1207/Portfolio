@@ -1,9 +1,10 @@
 require('dotenv').config()
+const functions = require('firebase-functions')
 const express = require('express')
 const bodyParser = require('body-parser')
-const cors = require('cors')
 const nodemailer = require('nodemailer')
 const { google } = require("googleapis")
+import { Request, Response, NextFunction } from 'express'
 
 const app = express()
 app.use(bodyParser.json());
@@ -23,7 +24,7 @@ oauth2Client.setCredentials({
 const accessToken = oauth2Client.getAccessToken()
 
 
-app.post('/sendEmail', (req, res, next) => {
+app.post('/sendEmail', (req: Request, res: Response, next: NextFunction) => {
   const data = {
     from: req.body.name,
     to : process.env.GMAIL,
@@ -43,7 +44,7 @@ app.post('/sendEmail', (req, res, next) => {
     }
   })
 
-  smtpTransport.sendMail(data, function(error) {
+  smtpTransport.sendMail(data, function(error: any) {
     if(error) {
       console.log(error)
       res.status(400);
@@ -54,11 +55,8 @@ app.post('/sendEmail', (req, res, next) => {
   })
 }) 
 
-app.get('/', (req, res) => {
-  console.log('Ok')
-  res.json(200)
-})
-
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`)
 })
+
+exports.app = functions.https.onRequest(app);
