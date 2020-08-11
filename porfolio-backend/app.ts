@@ -3,16 +3,31 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const nodemailer = require('nodemailer')
+const { google } = require("googleapis")
 
 const app = express()
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const { OAuth2 } = google.auth;
+
+const oauth2Client = new OAuth2(
+  process.env.CLIENT_ID,
+  process.env.CLIENT_SECRECT,
+  process.env.URI
+)
+
+oauth2Client.setCredentials({
+  refresh_token: process.env.REFRESH_TOKEN,
+});
+const accessToken = oauth2Client.getAccessToken()
+
+
 app.post('/sendEmail', (req, res, next) => {
   const data = {
     from: req.body.name,
     to : process.env.GMAIL,
-    subject: req.body.name + req.body.title,
+    subject: req.body.name + ' ' + req.body.title,
     text: req.body.content
   }
 
@@ -22,8 +37,9 @@ app.post('/sendEmail', (req, res, next) => {
       type: "OAuth2",
       user: process.env.GMAIL,
       clientId: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENTSECRECT,
-      refreshToken: process.env.REFRESHTOKEN
+      clientSecret: process.env.CLIENT_SECRECT,
+      refreshToken: process.env.REFRESH_TOKEN,
+      accessToken: accessToken
     }
   })
 
