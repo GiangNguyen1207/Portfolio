@@ -4,11 +4,13 @@ require('dotenv').config();
 const functions = require('firebase-functions');
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 const { google } = require("googleapis");
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 const { OAuth2 } = google.auth;
 const oauth2Client = new OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRECT, process.env.URI);
 oauth2Client.setCredentials({
