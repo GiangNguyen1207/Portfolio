@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 import Heading from 'components/Heading'
 import { useService } from 'services/api'
 import './style.scss'
 
 const Contact = () => {
-  const sendEmail = useService()
+  const dispatch = useDispatch()
+  const sendEmail = useService(dispatch)
   const [name, setName] = useState('')
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')

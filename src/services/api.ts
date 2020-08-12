@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-export const useService = () => {
+import { showNotification } from 'redux/actions/notification'
+
+export const useService = (dispatch: Function) => {
   const sendEmail = async (name: string, title: string, content: string) => {
     try {
       const res = await axios.post('', {
@@ -9,10 +11,10 @@ export const useService = () => {
         text: content,
       })
       if (res.status === 200) {
-        alert('Email sent successfully')
+        dispatch(showNotification('Email has been sent', 'success'))
       }
     } catch (error) {
-      alert('Something goes wrong')
+      dispatch(showNotification('Ooop! Something goes wrong', 'failure'))
     }
   }
 
