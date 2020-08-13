@@ -1,3 +1,5 @@
+@import '~assets/base/breakpoints';
+
 .primary {
   margin: 0;
   font-size: 90px;
@@ -28,4 +30,22 @@
   letter-spacing: 2px;
   text-align: center;
   font-style: italic;
+}
+
+@media (max-width: $tablet-portrait) {
+  .primary {
+    font-size: 80px;
+  }
+}
+
+
+@media (max-width: $phone) {
+  .primary {
+    font-size: 60px;
+  }
+
+  .normal {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

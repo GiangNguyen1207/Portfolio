@@ -1,6 +1,6 @@
 import React from 'react'
 
-import avatar from 'images/pic.jpg'
+import avatar from 'assets/images/pic.jpg'
 import Heading from 'components/Heading'
 import Description from 'components/Description'
 import './style.scss'
@@ -15,10 +15,15 @@ const About = () => {
           type="normal"
         />
         <div className="about-description">
+          <Description text="This is a little story about me:" type="center" />
           <Description
-            text=" I am a fresh full-stack developer, specializing in designing,
-            developing and managing web application. I have experience in
-            TypeScript, JavaScript, ReactJs and NodeJs."
+            text="I had an interest in technology and 
+            building web/web app for a long time. 
+            After graduating from Haaga-Helia University of Applied Sciences 
+            2 years ago with a Business Administration Degree, I started to 
+            equip myself with necessary stacks to become a full-stack developer.
+            I am a quick learner, solution-oriented and optimistic person
+            who thrives on challenges. "
             type="center"
           />
         </div>

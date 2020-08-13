@@ -1,5 +1,7 @@
-import eventapp from 'images/event_hacker.png'
-import countryapp from 'images/country_app.png'
+import eventapp from 'assets/images/event_hacker.png'
+import countryapp from 'assets/images/country_app.png'
+import esrapplicant from 'assets/images/esr_applicant.png'
+import ecommerce from 'assets/images/e_commerce.png'
 
 export const projects = [
   {
@@ -16,8 +18,23 @@ export const projects = [
     pic: countryapp,
     description:
       'A small web app built with Reactjs and Material UI. The web app allows users to search for countries by name and see the information of each country. Countries can also be sorted by each column, for example, name, languages, etc. Besides, customers can add all the countries they like into a favourite cart.',
-    stacks: 'TypeScript, React, Redux(Thunk + Saga), Material UI',
+    stacks: 'TypeScript, React, Redux(Thunk + Saga), Material UI, Docker',
     demoLink: 'https://countryapptrial.netlify.com',
     repoLink: 'https://github.com/GiangNguyen1207/CountryApp',
+  },
+  {
+    title: 'E-commerce',
+    pic: ecommerce,
+    description:
+      'It is an e-commerce project that was built based on the inspiration from FOREO. The project contained front-end and back-end development, backed by MongoDB. It supports all the functions of a e-commerce website, for example, users can sign in/sign up manually or login with Google, search for products, see the details of the products, add products to cart, and check out the total fee, etc.',
+    stacks:
+      'TypeScript, React, Redux, Material UI, Node, Express, MongoDB, REST API, Jest',
+  },
+  {
+    title: 'ESR Applicant',
+    pic: esrapplicant,
+    description:
+      'This project is conducted by Integrify Oy. It is an application built for students and external users to take exams organized by Integrify. This is a group project.',
+    stacks: 'TypeScript, React, Redux',
   },
 ]

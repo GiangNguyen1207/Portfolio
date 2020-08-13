@@ -1,4 +1,6 @@
-.skill-container { 
+@import '~assets/base/breakpoints';
+
+.skill { 
   width: 90%;
   height: 100%;
   margin: 0 auto;
@@ -11,48 +13,27 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-top: 30px;
   }
 }
 
-$tablet-breakpoint: 768px;
-$phone-breakpoint: 414px;
-
-@media (max-width: $tablet-breakpoint) {
-  .skill-container { 
-    padding: 12% 0;
-  }
-
-  .skill-grid {
-    flex-wrap: wrap;
-  }
-
-  .skill-grid-box {
-    flex: 0 40%;
-    margin-bottom: 5%;
-  }
-
-  .stack-image {
-    margin-top: 5%;
+@media (max-width: $tablet-portrait) {
+  .skill { 
+    &__grid {
+      flex-wrap: wrap;
+    }
   }
 }
 
-@media (max-width: $phone-breakpoint) {
-  .skill-container { 
+@media (max-width: $phone) {
+  .skill { 
     width: 80%;
-    padding: 25% 0;
-  }
+    height: auto;
+    margin: 75px auto 50px auto;
 
-  .skill-grid {
-    flex-wrap: wrap;
-  }
-
-  .skill-grid-box {
-    flex: 0 100%;
-    margin-bottom: 10%;
-  }
-
-  .stack-image {
-    margin-top: 5%;
+    &__grid {
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
   }
 }

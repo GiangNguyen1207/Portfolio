@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AppBar from 'components/AppBar'
+import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Alert from 'components/Alert'
 import Routes from './Routes'
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <AppBar />
+      <Header />
       <Alert toggleAlert={message ? true : false} text={message} type={type} />
       <Routes />
       <Footer />

@@ -1,19 +1,32 @@
-.homepage-container {
+@import '~assets/animation/animations';
+@import '~assets/base/breakpoints';
+
+.homepage {
   width: 90%;
   height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__greeting {
+    width: 35%;
+  }
+
+  &__animation {
+    width: 55%;
+  }
 }
 
-.introduction-container {
-  width: 35%;
+.homepage-heading {
+  margin-bottom: 50px;
   animation: hello 1s
 }
 
-.animation {
-  width: 55%;
+.homepage-text {
+  animation: zoomIn 1s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
 }
 
 #head {
@@ -30,94 +43,34 @@
   transform-origin: left;
 }
 
-@keyframes head {
-  from {
-    transform: rotateX(0deg);
-  }
-  to {
-    transform: rotateX(10deg);
-  }
-}
-
-@keyframes hand {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(-10px);
-  }
-}
-
-@keyframes leaves {
-  0% {
-    transform: skewX(0);
-  }
-  50% {
-    transform: skewX(5deg);
-  }
-  100% {
-    transform: skewX(-5deg);
-  }
-}
-
-@keyframes hello {
-  from {
-    opacity: 0;
-    transform: translateY(-500px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-$tablet-breakpoint: 1024px;
-$ipad-breakpoint: 768px;
-$phone-breakpoint: 414px;
-
-@media (max-width: $tablet-breakpoint) {
-  .introduction-container {
+@media (max-width: $tablet-landscape) {
+  .homepage-heading {
     font-size: 80px ;
-    margin: 0 auto;
   }
 }
 
-@media (max-width: $ipad-breakpoint) {
-  .homepage-container {
+@media (max-width: $tablet-portrait) {
+  .homepage {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    &__greeting {
+      width: 100%;
+    }
+
+    &__animation {
+      width: 80%;
+    }
   }
   
-  .introduction-container {
-    width: 100%;
-    font-size: 80px;
+  .homepage-heading {
     text-align: center;
-    line-height: 80px;
-    padding-bottom: 10%;
-
-    p {
-      margin: 0;
-    }
+    margin-bottom: 30px;
   }
 
-  .animation {
-    align-self: center;
-    width: 100%;
-  }
-}
-
-@media (max-width: $phone-breakpoint) {
-  .introduction-container {
-    font-size: 50px ;
-
-    p {
-      margin: 0;
-      padding: 0
-    }
+  .homepage-text {
+    text-align: center;
+    margin-bottom: 30px;
   }
 }

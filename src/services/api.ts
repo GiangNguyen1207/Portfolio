@@ -14,13 +14,13 @@ export const useService = (dispatch: Function) => {
         dispatch(showNotification('Email has been sent', 'success'))
         setTimeout(() => {
           dispatch(hideNotification())
-        }, 2000)
+        }, 4000)
       }
     } catch (error) {
       dispatch(showNotification('Ooop! Something goes wrong', 'failure'))
       setTimeout(() => {
         dispatch(hideNotification())
-      }, 2000)
+      }, 4000)
     }
   }
 

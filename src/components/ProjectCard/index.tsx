@@ -11,6 +11,7 @@ type Props = {
   pic: string;
   description: string;
   stacks: string;
+  demolink?: string;
   onClickDemo: () => void;
   onClickRepo: () => void;
 };
@@ -21,6 +22,7 @@ const ProjectCard = ({
   pic,
   description,
   stacks,
+  demolink,
   onClickDemo,
   onClickRepo,
 }: Props) => {
@@ -45,16 +47,20 @@ const ProjectCard = ({
           <p>{description}</p>
           <p>Tech stacks: {stacks}</p>
           <div className="project-card-button">
-            <ButtonComponent
-              label="Live demo"
-              handleButton={onClickDemo}
-              type="big"
-            />
-            <ButtonComponent
-              label="Github Repository"
-              handleButton={onClickRepo}
-              type="big"
-            />
+            {demolink && (
+              <>
+                <ButtonComponent
+                  label="Live demo"
+                  handleButton={onClickDemo}
+                  type="big"
+                />
+                <ButtonComponent
+                  label="Github Repository"
+                  handleButton={onClickRepo}
+                  type="big"
+                />
+              </>
+            )}
           </div>
         </div>
       </Accordion.Collapse>

@@ -7,12 +7,12 @@ import './style.scss'
 
 const Skills = () => {
   return (
-    <div className="skill-container">
+    <div className="skill">
       <Heading
         title="Find more about the stacks I have prepared on the fullstack path:"
         type="colorful"
       />
-      <div className="skill-container__grid">
+      <div className="skill__grid">
         <SkillBox name="Front-end" stacks={frontend} />
         <SkillBox name="Back-end" stacks={backend} />
         <SkillBox name="DevOps" stacks={devOps} />

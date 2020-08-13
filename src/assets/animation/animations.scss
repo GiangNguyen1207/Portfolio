@@ -1,0 +1,65 @@
+@keyframes dropDown {
+  from {
+    transform: translateY(-65px);
+    z-index: -1
+  }
+  to {
+    transform: translateY(0);
+    z-index: -2
+  }
+}
+
+@keyframes head {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(10deg);
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes leaves {
+  0% {
+    transform: skewX(0);
+  }
+  50% {
+    transform: skewX(5deg);
+  }
+  100% {
+    transform: skewX(-5deg);
+  }
+}
+
+@keyframes hello {
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

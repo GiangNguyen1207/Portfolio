@@ -31,7 +31,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="contact-container">
+    <div className="contact">
       <Heading title="Contact me" type="colorful" />
       <div className="form">
         <form onSubmit={onSubmit}>

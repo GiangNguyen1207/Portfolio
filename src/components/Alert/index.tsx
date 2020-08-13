@@ -13,13 +13,9 @@ type Props = {
 
 const Alert = ({ toggleAlert, text, type }: Props) => {
   return (
-    <div
-      className={`alert-container alert-container--${
-        toggleAlert ? '' : 'hide'
-      }`}
-    >
+    <div className={`alert-card alert-card--${toggleAlert ? '' : 'hide'}`}>
       <div
-        className={`alert-card alert-card--${
+        className={`alert-type alert-type--${
           type === 'success' ? 'success' : 'failure'
         }`}
       >

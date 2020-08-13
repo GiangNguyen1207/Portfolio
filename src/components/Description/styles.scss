@@ -1,13 +1,28 @@
+@import '~assets/base/breakpoints';
+
 .description {
   margin: 0;
   font-size: 18px;
 
   &--center {
     text-align: center;
-    line-height: 40px;
+    line-height: 32px;
   }
 
   &--left {
-    font-size: 14px
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    font-style: italic;
+  }
+}
+
+@media (max-width: $phone) {
+  .description {
+    font-size: 12px;
+
+    &--center {
+      line-height: 24px;
+    }
   }
 }

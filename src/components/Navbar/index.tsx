@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import brandName from 'images/brand_name.png'
+import brandName from 'assets/images/brand_name.png'
 import './style.scss'
 
 type Props = {

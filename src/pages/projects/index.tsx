@@ -7,12 +7,12 @@ import './style.scss'
 
 const Projects = () => {
   return (
-    <div className="project-container">
+    <div className="project">
       <Heading
         title="Below are my projects that I have joined:"
         type="colorful"
       />
-      <div className="project-container__card">
+      <div className="project__card">
         {projects.map((p, index) => {
           return (
             <ProjectCard
@@ -22,6 +22,7 @@ const Projects = () => {
               pic={p.pic}
               description={p.description}
               stacks={p.stacks}
+              demolink={p.demoLink}
               onClickDemo={() => window.open(p.demoLink)}
               onClickRepo={() => window.open(p.repoLink)}
             />
