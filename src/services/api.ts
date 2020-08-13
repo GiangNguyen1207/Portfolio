@@ -8,7 +8,7 @@ export const useService = (dispatch: Function) => {
       const res = await axios.post('', {
         name: name,
         title: title,
-        text: content,
+        content: content,
       })
       if (res.status === 200) {
         dispatch(showNotification('Email has been sent', 'success'))
