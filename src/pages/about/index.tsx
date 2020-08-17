@@ -10,10 +10,7 @@ const About = () => {
     <div className="about">
       <div className="about__content">
         <img src={avatar} alt="avatar" className="avatar" />
-        <Heading
-          title="Hi. My name is Giang. Nice to meet you!"
-          type="normal"
-        />
+        <Heading title="My name is Giang. Nice to meet you!" type="normal" />
         <div className="about-description">
           <Description text="This is a little story about me:" type="center" />
           <Description

@@ -14,9 +14,3 @@ body {
   color: getColor(black, primary);
   font-size: 14px;
 }
-
-@media (max-width: $phone) {
-  body {
-    font-size: 12px;
-  }
-}

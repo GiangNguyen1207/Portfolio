@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <div className="skill">
       <Heading
-        title="Find more about the stacks I have prepared on the fullstack path:"
+        title="Find more about the stacks I have prepared:"
         type="colorful"
       />
       <div className="skill__grid">
