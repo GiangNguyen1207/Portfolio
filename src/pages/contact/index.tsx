@@ -43,7 +43,7 @@ const Contact = () => {
           <Button label="send" handleButton={() => onSubmit} type="small" />
           <Description
             text="(Please wait a few seconds for the message 
-          to be sent. You will received a notification on top of the page.)"
+          to be sent. You will receive a notification on top of the page.)"
             type="left"
           />
         </form>

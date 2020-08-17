@@ -1,4 +1,4 @@
-@import '~assets/base/breakpoints';
+@import '~assets/base/breakpoints/breakpoints';
 
 .skill { 
   width: 90%;
@@ -29,7 +29,7 @@
   .skill { 
     width: 80%;
     height: auto;
-    margin: 75px auto 50px auto;
+    margin: 75px auto 60px auto;
 
     &__grid {
       margin-top: 10px;

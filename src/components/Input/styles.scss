@@ -1,3 +1,4 @@
+@import '~assets/base/breakpoints/breakpoints';
 @import '~assets/base/colors/colors.scss';
 
 input[type=text], textarea {
@@ -10,4 +11,15 @@ input[type=text], textarea {
 
 textarea {
   height: 100px;
+}
+
+@media (max-width: $phone) {
+  input[type=text], textarea {
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    height: 80px;
+  }
 }

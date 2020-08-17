@@ -1,3 +1,4 @@
+@import '~assets/base/breakpoints/breakpoints';
 @import '~assets/base/colors/colors.scss';
 
 body, html, #root {
@@ -12,4 +13,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: getColor(black, primary);
   font-size: 14px;
+}
+
+@media (max-width: $phone) {
+  body {
+    font-size: 12px;
+  }
 }

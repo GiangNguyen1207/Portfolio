@@ -1,5 +1,5 @@
 @import '~assets/base/animation/animations';
-@import '~assets/base/breakpoints';
+@import '~assets/base/breakpoints/breakpoints';
 
 .homepage {
   width: 90%;
@@ -43,12 +43,6 @@
   transform-origin: left;
 }
 
-@media (max-width: $tablet-landscape) {
-  .homepage-heading {
-    font-size: 80px ;
-  }
-}
-
 @media (max-width: $tablet-portrait) {
   .homepage {
     display: flex;
@@ -66,11 +60,19 @@
   
   .homepage-heading {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 
   .homepage-text {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+
+@media (max-width: $tablet-landscape) {
+  .homepage {
+    height: auto;
+    margin: 75px auto 60px auto;
   }
 }

@@ -1,4 +1,4 @@
-@import '~assets/base/breakpoints';
+@import '~assets/base/breakpoints/breakpoints';
 
 .description {
   margin: 0;
@@ -20,6 +20,11 @@
 @media (max-width: $phone) {
   .description {
     font-size: 12px;
+
+    &--left {
+      padding: 0;
+      line-height: 20px;
+    }
 
     &--center {
       line-height: 24px;

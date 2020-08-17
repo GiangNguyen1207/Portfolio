@@ -1,5 +1,5 @@
-@import '~assets/base/breakpoints';
-@import '~assets/base/colors/colors.scss';
+@import '~assets/base/breakpoints/breakpoints';
+@import '~assets/base/colors/colors';
 
 .button {
   cursor: pointer;
@@ -30,6 +30,7 @@
 @media (max-width: $phone) {
   .button {
     &--small {
+      padding: 10px;
       width: 100%;
     }
   }

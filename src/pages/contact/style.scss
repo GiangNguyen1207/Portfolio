@@ -1,4 +1,4 @@
-@import '~assets/base/breakpoints';
+@import '~assets/base/breakpoints/breakpoints';
 
 .contact {
   height: 100%;
@@ -14,12 +14,12 @@
 
 @media (max-width: $phone) {
   .contact {
-    width: 80%;
-    margin: 0 auto;
+    width: 85%;
+    height: auto;
+    margin: 75px auto 60px auto;
 
     .form {
-      margin: 0 0 10px 0;
+      margin: 0 auto;
     }
   }
-
 }
