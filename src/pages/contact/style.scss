@@ -1,5 +1,4 @@
 @import '~assets/base/breakpoints';
-@import '~assets/base/colors/colors.scss';
 
 .contact {
   height: 100%;
@@ -9,19 +8,7 @@
   justify-content: center;
 
   .form {
-    margin: 1% 10%;
-    
-    input[type=text], textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 30px;
-      border: 1px solid getColor(grey, primary);
-      border-radius: 4px;
-    }
-
-    textarea {
-      height: 100px;
-    }
+    margin: 1% 10%;  
   }
 }
 
@@ -32,10 +19,6 @@
 
     .form {
       margin: 0 0 10px 0;
-
-      input[type=submit] {
-        width: 100%;
-      }
     }
   }
 

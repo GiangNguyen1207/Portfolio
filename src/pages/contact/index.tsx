@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux'
 
 import Heading from 'components/Heading'
 import Button from 'components/Button'
+import Description from 'components/Description'
+import Input from 'components/Input'
 import { useService } from 'services/api'
 import './style.scss'
 
@@ -35,18 +37,15 @@ const Contact = () => {
       <Heading title="Contact me" type="colorful" />
       <div className="form">
         <form onSubmit={onSubmit}>
-          <label htmlFor="name">Name:</label>
-          <br />
-          <input type="text" id="name" name="name" onChange={getName} />
-          <br />
-          <label htmlFor="title">Title:</label>
-          <br />
-          <input type="text" id="title" name="title" onChange={getTitle} />
-          <br />
-          <label htmlFor="content">Content:</label>
-          <br />
-          <textarea id="content" name="content" onChange={getContent} />
+          <Input label="Name" type="text" onChangeText={getName} />
+          <Input label="Title" type="text" onChangeText={getTitle} />
+          <Input label="Content" type="textarea" onChangeArea={getContent} />
           <Button label="send" handleButton={() => onSubmit} type="small" />
+          <Description
+            text="(Please wait a few seconds for the message 
+          to be sent. You will received a notification on top of the page.)"
+            type="left"
+          />
         </form>
       </div>
     </div>
