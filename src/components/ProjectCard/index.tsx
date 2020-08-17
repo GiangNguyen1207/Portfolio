@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion'
 
-import ButtonComponent from 'components/Button'
+import Button from 'components/Button'
 import './styles.scss'
 
 type Props = {
@@ -49,12 +49,12 @@ const ProjectCard = ({
           <div className="project-card-button">
             {demolink && (
               <>
-                <ButtonComponent
+                <Button
                   label="Live demo"
                   handleButton={onClickDemo}
                   type="big"
                 />
-                <ButtonComponent
+                <Button
                   label="Github Repository"
                   handleButton={onClickRepo}
                   type="big"

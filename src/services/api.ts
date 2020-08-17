@@ -5,13 +5,21 @@ import { showNotification, hideNotification } from 'redux/actions/notification'
 export const useService = (dispatch: Function) => {
   const sendEmail = async (name: string, title: string, content: string) => {
     try {
-      const res = await axios.post('lio.cloudfunctions.net/app/sendEmail', {
-        name: name,
-        title: title,
-        content: content,
-      })
+      const res = await axios.post(
+        'https://us-central1-backend-porfolio.cloudfunctions.net/app/sendEmail',
+        {
+          name: name,
+          title: title,
+          content: content,
+        }
+      )
       if (res.status === 200) {
-        dispatch(showNotification('Email has been sent', 'success'))
+        dispatch(
+          showNotification(
+            'Your message has been sent. Thank you for contacting!',
+            'success'
+          )
+        )
         setTimeout(() => {
           dispatch(hideNotification())
         }, 4000)

@@ -6,7 +6,7 @@
   margin-right: 2%;
   padding: 2%;
   border-radius: 15px;
-  background-color: getColorAndTone(black, primary);
+  background-color: getColor(black, primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
 
   &__heading {
@@ -14,12 +14,12 @@
     margin: 5% auto;
     padding: 5px;
     text-align: center;
-    background: getColorAndTone(yellow, primary);
+    background: getColor(yellow, primary);
   }
 
   li {
     padding: 3%;
-    color: getColorAndTone(white, primary);
+    color: getColor(white, primary);
   }
 }
 

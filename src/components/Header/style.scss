@@ -8,7 +8,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 1px 4px 6px getColorAndTone(black, secondary);
-  background: getColorAndTone(yellow, primary);
+  box-shadow: 1px 4px 6px getColor(black, secondary);
+  background: getColor(yellow, primary);
   z-index: 1;
 }

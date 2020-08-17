@@ -8,7 +8,7 @@
   top: 65px;
   bottom: 700px;
   left: 0;
-  color: getColorAndTone(white, primary);
+  color: getColor(white, primary);
   animation: alert 0.5s ease;
 
   &--hide {
@@ -18,10 +18,10 @@
 
 .alert-type {
   &--success {
-    background: getColor(success)
+    background: getColor(success, primary)
   }
   
   &--failure {
-    background: getColor(failure)
+    background: getColor(failure, primary)
   }
 }

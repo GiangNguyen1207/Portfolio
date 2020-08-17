@@ -15,20 +15,15 @@ $palette: (
     primary: #C0C0C0,
     secondary: #DDDDDD,
   ),
-  success: #008000,
-  failure: #EF233C
+  success: (
+    primary: #008000
+  ), 
+  failure: (
+    primary: #EF233C
+  ) 
 );
 
-@function getColor($color) {
-  @warn map-get($palette,$color);
-  @if map-has-key($palette,$color) {
-    $color: map-get($palette,$color); 
-    @return $color;
-  }
-  @return null;
-}
-
-@function getColorAndTone($color, $tone) {
+@function getColor($color, $tone) {
   @warn map-get($palette,$color);
   @if map-has-key($palette,$color) {
     $color: map-get($palette,$color);

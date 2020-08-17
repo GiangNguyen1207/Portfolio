@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 import Heading from 'components/Heading'
+import Button from 'components/Button'
 import { useService } from 'services/api'
 import './style.scss'
 
@@ -45,7 +46,7 @@ const Contact = () => {
           <label htmlFor="content">Content:</label>
           <br />
           <textarea id="content" name="content" onChange={getContent} />
-          <input type="submit" value="Send" />
+          <Button label="send" handleButton={() => onSubmit} type="small" />
         </form>
       </div>
     </div>

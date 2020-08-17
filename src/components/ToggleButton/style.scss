@@ -8,7 +8,7 @@
   .line1 {
     width: 30px;
     height: 3px;
-    background-color: getColorAndTone(black, primary);
+    background-color: getColor(black, primary);
     margin: 6px 0;
     border-radius: 10px;
 
@@ -17,7 +17,7 @@
       position: absolute;
       width: 30px;
       height: 3px;
-      background-color: getColorAndTone(black, secondary);
+      background-color: getColor(black, primary);
       border-radius: 10px;
       transition: all .2s ease-in-out;
     }

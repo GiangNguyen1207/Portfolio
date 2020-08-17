@@ -1,26 +1,36 @@
+@import '~assets/base/breakpoints';
 @import '~assets/base/colors/colors.scss';
 
 .button {
   cursor: pointer;
   margin: 1% 0 1% 0;
   padding: 8px;
-  background-color: getColorAndTone(yellow, primary);
+  background-color: getColor(yellow, primary);
   border: none;
   display: inline-block;
-  font-size: 14px;
   border-radius: 5px;
 
   &--big {
-    width: 150px
+    width: 100%
   }
 
   &--small {
-    width: 50px;
+    padding: 12px;
+    text-transform: uppercase;
+    width: 15%;
   }
 
   &:hover, &:focus {
-    background-color: getColorAndTone(yellow, secondary);
+    background-color: getColor(yellow, secondary);
     border-radius: 4px;
     outline: none;
   }  
+}
+
+@media (max-width: $phone) {
+  .button {
+    &--small {
+      width: 100%;
+    }
+  }
 }

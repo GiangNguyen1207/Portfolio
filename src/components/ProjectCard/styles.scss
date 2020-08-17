@@ -9,7 +9,7 @@
   margin: 2%;
 
   &__content {
-    border: 1px solid getColorAndTone(grey, primary);
+    border: 1px solid getColor(grey, primary);
     border-radius: 5px;
     padding: 0;
     
@@ -39,7 +39,7 @@
   height: 100%;
   display: none;
   transition: .5s ease;
-  background-color: getColorAndTone(black, secondary);
+  background-color: getColor(black, secondary);
 
   &--hide {
     opacity: 0;
@@ -47,7 +47,7 @@
 }
 
 .project-text {
-  color: getColorAndTone(white, primary);
+  color: getColor(white, primary);
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -64,8 +64,8 @@
 }
 
 .collapse, .collapsing {
-  border: 1px solid getColorAndTone(grey, secondary);
-  background-color: getColorAndTone(white, primary);
+  border: 1px solid getColor(grey, secondary);
+  background-color: getColor(white, primary);
   padding: 10px;
   border-top: none;
   box-shadow: none;

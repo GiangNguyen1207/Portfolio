@@ -10,7 +10,7 @@
 }
 
 .link {
-  color: getColorAndTone(black, primary);
+  color: getColor(black, primary);
   list-style-type: none;
   display: inline-block;
   font-family: 'Lobster Two', cursive;
@@ -24,8 +24,8 @@
 
   &--active, &:hover {
     text-decoration: none;
-    background-color: getColorAndTone(black, primary);
-    color: getColorAndTone(yellow, light);
+    background-color: getColor(black, primary);
+    color: getColor(yellow, light);
   }
 }
 
@@ -46,7 +46,7 @@
     height: 365px;
     top: 65px;
     margin: 0;
-    background-color: getColorAndTone(yellow, primary);
+    background-color: getColor(yellow, primary);
     display: flex;
     flex-direction: column;
     align-items: center;

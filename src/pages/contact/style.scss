@@ -15,24 +15,8 @@
       width: 100%;
       padding: 12px;
       margin-bottom: 30px;
-      border: 1px solid getColorAndTone(grey, primary);
+      border: 1px solid getColor(grey, primary);
       border-radius: 4px;
-    }
-
-    input[type=submit] {
-      width: 15%;
-      background-color: getColorAndTone(yellow, primary);
-      padding: 12px;
-      text-transform: uppercase;;
-      margin-top: 5px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-
-      &:hover, &:focus {
-        background-color: getColorAndTone(yellow, primary);
-        outline: none;
-      }
     }
 
     textarea {
