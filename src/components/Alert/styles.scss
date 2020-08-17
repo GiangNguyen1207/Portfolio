@@ -1,4 +1,5 @@
-@import '~assets/animation/animations';
+@import '~assets/base/colors/colors.scss';
+@import '~assets/base/animation/animations';
 
 .alert-card {
   display: block;
@@ -7,8 +8,8 @@
   top: 65px;
   bottom: 700px;
   left: 0;
-  color: #F6F6F6;
-  animation: dropDown 0.5s ease;
+  color: getColorAndTone(white, primary);
+  animation: alert 0.5s ease;
 
   &--hide {
     display: none;
@@ -17,10 +18,10 @@
 
 .alert-type {
   &--success {
-    background: #008000
+    background: getColor(success)
   }
   
   &--failure {
-    background: #EF233C
+    background: getColor(failure)
   }
 }

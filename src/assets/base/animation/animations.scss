@@ -1,4 +1,4 @@
-@keyframes dropDown {
+@keyframes alert {
   from {
     transform: translateY(-65px);
     z-index: -1
@@ -53,7 +53,7 @@
   }
 }
 
-@keyframes zoomIn {
+@keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translateX(-500px);

@@ -1,10 +1,14 @@
+@import '~assets/base/breakpoints';
+@import '~assets/base/colors/colors.scss';
+
 .burger {
   display: none;
+  outline: none;
 
   .line1 {
     width: 30px;
     height: 3px;
-    background-color: #333644;
+    background-color: getColorAndTone(black, primary);
     margin: 6px 0;
     border-radius: 10px;
 
@@ -13,7 +17,7 @@
       position: absolute;
       width: 30px;
       height: 3px;
-      background-color: #333644;
+      background-color: getColorAndTone(black, secondary);
       border-radius: 10px;
       transition: all .2s ease-in-out;
     }
@@ -42,9 +46,7 @@
   }
 }
 
-$phone-breakpoint: 767px;
-
-@media (max-width: $phone-breakpoint) {
+@media (max-width: $phone) {
   .burger {
     display: block;
     cursor: pointer;

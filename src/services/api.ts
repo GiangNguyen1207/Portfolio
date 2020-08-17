@@ -5,7 +5,7 @@ import { showNotification, hideNotification } from 'redux/actions/notification'
 export const useService = (dispatch: Function) => {
   const sendEmail = async (name: string, title: string, content: string) => {
     try {
-      const res = await axios.post('', {
+      const res = await axios.post('lio.cloudfunctions.net/app/sendEmail', {
         name: name,
         title: title,
         content: content,

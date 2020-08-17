@@ -1,11 +1,12 @@
 @import '~assets/base/breakpoints';
+@import '~assets/base/colors/colors.scss';
 
 .skill-box {
   width: 25%;
   margin-right: 2%;
   padding: 2%;
   border-radius: 15px;
-  background-color: #333644;
+  background-color: getColorAndTone(black, primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, .5);
 
   &__heading {
@@ -13,12 +14,12 @@
     margin: 5% auto;
     padding: 5px;
     text-align: center;
-    background: #ffd52a;
+    background: getColorAndTone(yellow, primary);
   }
 
   li {
     padding: 3%;
-    color: #fffafa;
+    color: getColorAndTone(white, primary);
   }
 }
 

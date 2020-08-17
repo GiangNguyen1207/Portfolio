@@ -27,7 +27,6 @@ const Contact = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     sendEmail(name, title, content)
-    //window.location.reload()
   }
 
   return (

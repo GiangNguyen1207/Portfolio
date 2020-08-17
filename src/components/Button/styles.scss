@@ -1,10 +1,11 @@
+@import '~assets/base/colors/colors.scss';
+
 .button {
   cursor: pointer;
   margin: 1% 0 1% 0;
   padding: 8px;
-  background-color: #ffd52a;
+  background-color: getColorAndTone(yellow, primary);
   border: none;
-  color: #333644;
   display: inline-block;
   font-size: 14px;
   border-radius: 5px;
@@ -18,7 +19,7 @@
   }
 
   &:hover, &:focus {
-    background-color: #f7c600;
+    background-color: getColorAndTone(yellow, secondary);
     border-radius: 4px;
     outline: none;
   }  

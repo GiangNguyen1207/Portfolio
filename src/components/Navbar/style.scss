@@ -1,3 +1,6 @@
+@import '~assets/base/breakpoints';
+@import '~assets/base/colors/colors.scss';
+
 .nav-links {
   margin: 0;
   padding: 0;
@@ -7,7 +10,7 @@
 }
 
 .link {
-  color: #333644;
+  color: getColorAndTone(black, primary);
   list-style-type: none;
   display: inline-block;
   font-family: 'Lobster Two', cursive;
@@ -19,28 +22,20 @@
   padding: 12px;
   text-decoration: none;
 
-  &:hover {
+  &--active, &:hover {
     text-decoration: none;
-    background-color: #333644;
-    color: #fae7cb;
-  }
-
-  &--active {
-    background-color: #333644;
-    color: #fae7cb;
+    background-color: getColorAndTone(black, primary);
+    color: getColorAndTone(yellow, light);
   }
 }
 
-$tablet-breakpoint: 768px;
-$phone-breakpoint: 767px;
-
-@media (max-width: $tablet-breakpoint) {
+@media (max-width: $tablet-portrait) {
   .desktop-nav-links {
     width: 59%;
   }
 }
 
-@media (max-width: $phone-breakpoint) {
+@media (max-width: $phone) {
   body {
     overflow-x: hidden;
   }
@@ -48,10 +43,10 @@ $phone-breakpoint: 767px;
   .nav-links {
     position: fixed;
     right: 0;
-    height: 300px;
-    top: 80px;
+    height: 365px;
+    top: 65px;
     margin: 0;
-    background-color: #ffd52a;
+    background-color: getColorAndTone(yellow, primary);
     display: flex;
     flex-direction: column;
     align-items: center;

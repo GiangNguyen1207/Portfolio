@@ -1,11 +1,13 @@
+@import '~assets/base/colors/colors.scss';
+
 .footer-container {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 50px;
   margin: 0 auto;
-  background: #ffd52a;
-  color: #333644;
+  background: getColorAndTone(#ffff00, primary);
+  color: getColorAndTone(black, primary);
   font-size: 20px;
 
   .footer-grid {
@@ -23,7 +25,7 @@
     -moz-appearance: none;
     border: none;
     background: none;
-    color: #333644;
+    color: getColorAndTone(black, primary);
     font-size: large;
     cursor: pointer;
 

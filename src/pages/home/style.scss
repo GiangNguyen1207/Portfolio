@@ -1,4 +1,4 @@
-@import '~assets/animation/animations';
+@import '~assets/base/animation/animations';
 @import '~assets/base/breakpoints';
 
 .homepage {
@@ -24,7 +24,7 @@
 }
 
 .homepage-text {
-  animation: zoomIn 1s;
+  animation: slideInLeft 1s;
   animation-delay: 1s;
   animation-fill-mode: both;
 }

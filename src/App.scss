@@ -1,26 +1,15 @@
+@import '~assets/base/colors/colors.scss';
+
 body, html, #root {
   height: 100%;
 }
 
 body {
+  width: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  color: #333644;
-  width: 100%;
-}
-
-.title {
-  font-size: 28px;
-  font-family: 'Pacifico', cursive;
-} 
-
-$tablet-breakpoint: 767px;
-$phone-breakpoint: 414px; 
-
-@media (max-width: $tablet-breakpoint) {
-  .title {
-    font-size: 26px;
-  }
+  color: getColorAndTone(black, primary);
+  font-size: 14px;
 }

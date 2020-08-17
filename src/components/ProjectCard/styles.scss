@@ -1,4 +1,5 @@
 @import '~assets/base/breakpoints';
+@import '~assets/base/colors/colors.scss';
 
 .accordion {
   cursor: pointer;
@@ -8,7 +9,7 @@
   margin: 2%;
 
   &__content {
-    border: 1px solid #c0c0c0;
+    border: 1px solid getColorAndTone(grey, primary);
     border-radius: 5px;
     padding: 0;
     
@@ -38,7 +39,7 @@
   height: 100%;
   display: none;
   transition: .5s ease;
-  background-color: rgba(51, 54, 68, .8);
+  background-color: getColorAndTone(black, secondary);
 
   &--hide {
     opacity: 0;
@@ -46,7 +47,7 @@
 }
 
 .project-text {
-  color: #f2f2f2;
+  color: getColorAndTone(white, primary);
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -63,8 +64,8 @@
 }
 
 .collapse, .collapsing {
-  border: 1px solid #dddddd;
-  background-color: #efefef;
+  border: 1px solid getColorAndTone(grey, secondary);
+  background-color: getColorAndTone(white, primary);
   padding: 10px;
   border-top: none;
   box-shadow: none;

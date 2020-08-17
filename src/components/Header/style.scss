@@ -1,3 +1,5 @@
+@import '~assets/base/colors/colors.scss';
+
 nav {
   position: fixed;
   top: 0;
@@ -6,7 +8,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
-  background: #ffd52a;
+  box-shadow: 1px 4px 6px getColorAndTone(black, secondary);
+  background: getColorAndTone(yellow, primary);
   z-index: 1;
 }

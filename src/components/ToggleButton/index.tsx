@@ -11,7 +11,7 @@ const ToggleButton = ({ isNavbarOpen, toggleMenu }: Props) => {
   return (
     <div
       role="button"
-      className={isNavbarOpen ? 'burger--close' : 'burger'}
+      className={`burger burger--${isNavbarOpen ? 'close' : ''}`}
       onClick={toggleMenu}
       onKeyPress={toggleMenu}
       tabIndex={0}

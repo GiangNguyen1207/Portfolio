@@ -1,0 +1,42 @@
+$palette: (
+  black: (
+    primary: #333644,
+    secondary: rgba(0, 0, 0, .5)
+  ), 
+  yellow: (
+    primary: #FFD52A,
+    seconday: #F7C600,
+    light: #FAE7CB
+  ), 
+  white: (
+    primary: #F2F2F2,
+  ),
+  grey: (
+    primary: #C0C0C0,
+    secondary: #DDDDDD,
+  ),
+  success: #008000,
+  failure: #EF233C
+);
+
+@function getColor($color) {
+  @warn map-get($palette,$color);
+  @if map-has-key($palette,$color) {
+    $color: map-get($palette,$color); 
+    @return $color;
+  }
+  @return null;
+}
+
+@function getColorAndTone($color, $tone) {
+  @warn map-get($palette,$color);
+  @if map-has-key($palette,$color) {
+    $color: map-get($palette,$color);
+      @if map-has-key($color,$tone) {
+        $tone: map-get($color,$tone);
+        @return $tone;
+      }
+      @return null;        
+  }
+    @return null;
+}
