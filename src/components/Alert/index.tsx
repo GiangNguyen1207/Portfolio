@@ -19,12 +19,6 @@ const Alert = ({ toggleAlert, text, type }: Props) => {
           type === 'success' ? 'success' : 'failure'
         }`}
       >
-        {/* {type === 'success' && (
-          <Icon icon={checkCircle} size={60} className="success-icon" />
-        )}
-        {(type === 'warning' || type === 'warningFinish') && (
-          <Icon icon={exclamationTriangle} size={60} className="warning-icon" />
-        )} */}
         <Description text={text!} type="center" />
       </div>
     </div>
