@@ -2,6 +2,7 @@ import eventapp from 'assets/images/event_hacker.png'
 import countryapp from 'assets/images/country_app.png'
 import esrapplicant from 'assets/images/esr_applicant.png'
 import ecommerce from 'assets/images/e_commerce.png'
+import emory from 'assets/images/emory.png'
 
 export const projects = [
   {
@@ -36,5 +37,15 @@ export const projects = [
     description:
       'This project is conducted by Integrify Oy. It is an application built for students and external users to take exams organized by Integrify. This is a group project.',
     stacks: 'TypeScript, React, Redux',
+  },
+  {
+    title: 'Emory',
+    pic: emory,
+    description:
+      'Emory is a modern diary app. It allows you to store all of your daily activities and emotions using interactive icons or pictures. Besides, you can also track your mood index throughout a month with the support of our mood graph.',
+    stacks: 'Java, Android Studio',
+    demoLink:
+      'https://www.youtube.com/watch?v=lXGb_AlDxrY&feature=youtu.be&ab_channel=ThuyMyMai',
+    repoLink: 'https://github.com/GiangNguyen1207/emory',
   },
 ]

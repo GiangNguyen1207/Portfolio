@@ -6,6 +6,7 @@ export const frontend = [
   'Respnsive design: Bootstrap, Material UI',
 ]
 export const backend = [
+  'Java',
   'NodeJS',
   'ExpressJS',
   'REST API',
