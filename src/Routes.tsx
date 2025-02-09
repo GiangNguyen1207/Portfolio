@@ -1,20 +1,18 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React from "react";
+import { Route, Routes } from "react-router";
 
-import Homepage from 'pages/home'
-import About from 'pages/about'
-import Skills from 'pages/skills'
-import Projects from 'pages/projects'
-import Contact from 'pages/contact'
+import Homepage from "pages/home";
+import About from "pages/about";
+import Skills from "pages/skills";
+import Projects from "pages/projects";
 
-const Routes = () => (
-  <Switch>
-    <Route exact path="/" component={Homepage} />
-    <Route exact path="/about" component={About} />
-    <Route exact path="/stacks" component={Skills} />
-    <Route exact path="/projects" component={Projects} />
-    <Route exact path="/contact" component={Contact} />
-  </Switch>
-)
+const RoutesApp = () => (
+  <Routes>
+    <Route path="/" element={<Homepage />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/stacks" element={<Skills />} />
+    <Route path="/projects" element={<Projects />} />
+  </Routes>
+);
 
-export default Routes
+export default RoutesApp;

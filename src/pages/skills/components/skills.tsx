@@ -1,16 +1,21 @@
 export const frontend = [
-  'TypeScript',
-  'JavaScript',
-  'ReactJS',
-  'SveltJS',
-  'Respnsive design: Bootstrap, Material UI',
-]
+  "TypeScript",
+  "JavaScript",
+  "React/Redux",
+  "Angular",
+  "Bootstrap, Material UI",
+  "Testing framework: Jest, Jasmine",
+];
 export const backend = [
-  'Java',
-  'NodeJS',
-  'ExpressJS',
-  'REST API',
-  'Testing framework: Jest',
-  'Database: MongoDB, PostgreSQL',
-]
-export const devOps = ['Github', 'Bash scripting', 'Docker', 'Cloud: AWS']
+  "NodeJS",
+  "ExpressJS",
+  "C#, .NET",
+  "REST API",
+  "Database: MongoDB, MySQL, PostgreSQL",
+];
+export const devOps = [
+  "Github/Gitlab",
+  "Bash scripting",
+  "Docker",
+  "Cloud: AWS, Azure",
+];

@@ -1,8 +1,8 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router";
 
-import brandName from 'assets/images/brand_name.png'
-import './style.scss'
+import brandName from "assets/images/brand_name.png";
+import "./style.scss";
 
 type Props = {
   isNavbarOpen: boolean;
@@ -12,45 +12,42 @@ const DesktopAppBar = ({ isNavbarOpen }: Props) => {
   return (
     <>
       <img src={brandName} alt="brand name" />
-      <ul className={isNavbarOpen ? 'nav-links nav-links--open' : 'nav-links'}>
-        <NavLink exact to="/" className="link" activeClassName="link--active">
+      <ul className={isNavbarOpen ? "nav-links nav-links--open" : "nav-links"}>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "link link--active" : "link"
+          }
+        >
           Home
         </NavLink>
         <NavLink
-          exact
           to="/about"
-          className="link"
-          activeClassName="link--active"
+          className={({ isActive }) =>
+            isActive ? "link link--active" : "link"
+          }
         >
           About
         </NavLink>
         <NavLink
-          exact
           to="/stacks"
-          className="link"
-          activeClassName="link--active"
+          className={({ isActive }) =>
+            isActive ? "link link--active" : "link"
+          }
         >
           Stacks
         </NavLink>
         <NavLink
-          exact
           to="/projects"
-          className="link"
-          activeClassName="link--active"
+          className={({ isActive }) =>
+            isActive ? "link link--active" : "link"
+          }
         >
           Projects
         </NavLink>
-        <NavLink
-          exact
-          to="/contact"
-          className="link"
-          activeClassName="link--active"
-        >
-          Contact
-        </NavLink>
       </ul>
     </>
-  )
-}
+  );
+};
 
-export default DesktopAppBar
+export default DesktopAppBar;
