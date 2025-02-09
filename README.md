@@ -2,7 +2,7 @@
 
 The project is a personal portfolio. It contains the general information about me, the skills I have and the projects I have joined. 
 
-Live demo: https://master.d948fagyd8q79.amplifyapp.com
+Live demo: [https://master.d948fagyd8q79.amplifyapp.com](https://master.daahy5p6rfb45.amplifyapp.com/)
 
 ## Language and tools
 
